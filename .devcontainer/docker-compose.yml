@@ -19,7 +19,7 @@ services:
     volumes:
       - ./config/php-custom.ini:/usr/local/etc/php/conf.d/99-php-custom.ini # Personalize PHP configuration and params
       - ./config/php-xdebug.ini:/usr/local/etc/php/conf.d/99-php-xdebug.ini # Personalize Xdebug configuration and params
-      - wordpress:/var/www/html # Is it possible to moun root folder to work in a "full wordpress" installation
+      - ./wordpress:/var/www/html # Is it possible to moun root folder to work in a "full wordpress" installation
       - ..:/var/www/html${WORDPRESS_DEV_ITEM_PATH} # Mount working dir
 
   database:
